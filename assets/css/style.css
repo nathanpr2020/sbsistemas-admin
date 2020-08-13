@@ -18,10 +18,11 @@ body{
     flex-direction: column;
     display: flex;
 }
+
 .header__main{
     background: black;
     padding: 1rem;
-
+    
     -webkit-box-shadow: 9px 17px 65px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 9px 17px 65px 0px rgba(0,0,0,0.75);
     box-shadow: 9px 17px 65px 0px rgba(0,0,0,0.75);         
@@ -39,6 +40,8 @@ body{
 }
 
 .form-login__wrapper{
+    
+    max-width: 500px;
     background: white;
     border: 1px #000000 solid;
     padding: 1rem;
@@ -72,4 +75,23 @@ body{
     border: 0;
     text-align: center;
     border-radius: 20px;
+}
+
+@media (min-width: 900px){/*nesse caso quando você utiliza o media você esta colocando um IF se a tela tiver no min 900px será utilizada essa regra, caso seja maior vai mander a regra anterior do admin__wrapper*/
+    .admin__wrapper{
+        flex-direction: row;
+    }
+
+    .header__main{
+        align-items: center;
+        display: flex;
+    }
+
+    .main__wrapper{
+        align-items: center;
+    }
+
+    .form-login__wrapper{
+        width: 600px;
+    }
 }
